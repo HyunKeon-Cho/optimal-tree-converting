@@ -1,0 +1,2213 @@
+{
+  "AND2_X1": {
+    "area": {
+      "value": 1.064,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(A1 & A2)"
+    },
+    "leakage_power": {
+      "value": 25.066064,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.040499869641781594,
+      "unit": "ns"
+    }
+  },
+  "AND2_X2": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(A1 & A2)"
+    },
+    "leakage_power": {
+      "value": 50.35316,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03840955519576363,
+      "unit": "ns"
+    }
+  },
+  "AND2_X4": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(A1 & A2)"
+    },
+    "leakage_power": {
+      "value": 100.706457,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.037929923677368575,
+      "unit": "ns"
+    }
+  },
+  "AND3_X1": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "((A1 & A2) & A3)"
+    },
+    "leakage_power": {
+      "value": 26.48146,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.05232714314450049,
+      "unit": "ns"
+    }
+  },
+  "AND3_X2": {
+    "area": {
+      "value": 1.596,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "((A1 & A2) & A3)"
+    },
+    "leakage_power": {
+      "value": 53.19027,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.04954258012013838,
+      "unit": "ns"
+    }
+  },
+  "AND3_X4": {
+    "area": {
+      "value": 2.926,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "((A1 & A2) & A3)"
+    },
+    "leakage_power": {
+      "value": 106.380663,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.04864735295579182,
+      "unit": "ns"
+    }
+  },
+  "AND4_X1": {
+    "area": {
+      "value": 1.596,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(((A1 & A2) & A3) & A4)"
+    },
+    "leakage_power": {
+      "value": 27.024804,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.06584456044972724,
+      "unit": "ns"
+    }
+  },
+  "AND4_X2": {
+    "area": {
+      "value": 1.862,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(((A1 & A2) & A3) & A4)"
+    },
+    "leakage_power": {
+      "value": 54.274743,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.061711707077732124,
+      "unit": "ns"
+    }
+  },
+  "AND4_X4": {
+    "area": {
+      "value": 3.458,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(((A1 & A2) & A3) & A4)"
+    },
+    "leakage_power": {
+      "value": 108.54959,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.06079728860916146,
+      "unit": "ns"
+    }
+  },
+  "AOI21_X1": {
+    "area": {
+      "value": 1.064,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A | (B1 & B2))"
+    },
+    "leakage_power": {
+      "value": 27.858395,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.06915765062284215,
+      "unit": "ns"
+    }
+  },
+  "AOI21_X2": {
+    "area": {
+      "value": 1.862,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A | (B1 & B2))"
+    },
+    "leakage_power": {
+      "value": 55.71672,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.06801697892648839,
+      "unit": "ns"
+    }
+  },
+  "AOI21_X4": {
+    "area": {
+      "value": 3.458,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A | (B1 & B2))"
+    },
+    "leakage_power": {
+      "value": 111.433338,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.06833923428152118,
+      "unit": "ns"
+    }
+  },
+  "AOI22_X1": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 & A2) | (B1 & B2))"
+    },
+    "leakage_power": {
+      "value": 32.611944,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.07565922140940345,
+      "unit": "ns"
+    }
+  },
+  "AOI22_X2": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 & A2) | (B1 & B2))"
+    },
+    "leakage_power": {
+      "value": 65.223838,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.07606469172153235,
+      "unit": "ns"
+    }
+  },
+  "AOI22_X4": {
+    "area": {
+      "value": 4.522,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 & A2) | (B1 & B2))"
+    },
+    "leakage_power": {
+      "value": 130.447551,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.07592312032393447,
+      "unit": "ns"
+    }
+  },
+  "AOI211_X1": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((C1 & C2) | B) | A)"
+    },
+    "leakage_power": {
+      "value": 34.565711,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.11040951939407893,
+      "unit": "ns"
+    }
+  },
+  "AOI211_X2": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((C1 & C2) | B) | A)"
+    },
+    "leakage_power": {
+      "value": 69.131362,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.11024779087054372,
+      "unit": "ns"
+    }
+  },
+  "AOI211_X4": {
+    "area": {
+      "value": 2.926,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(!(!(((C1 & C2) | B) | A)))"
+    },
+    "leakage_power": {
+      "value": 126.001026,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.1170486735844233,
+      "unit": "ns"
+    }
+  },
+  "AOI221_X1": {
+    "area": {
+      "value": 1.596,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((C1 & C2) | A) | (B1 & B2))"
+    },
+    "leakage_power": {
+      "value": 41.741212,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.12063164190004118,
+      "unit": "ns"
+    }
+  },
+  "AOI221_X2": {
+    "area": {
+      "value": 2.926,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((C1 & C2) | A) | (B1 & B2))"
+    },
+    "leakage_power": {
+      "value": 83.482383,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.12097335356112703,
+      "unit": "ns"
+    }
+  },
+  "AOI221_X4": {
+    "area": {
+      "value": 3.458,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(!(!(((C1 & C2) | A) | (B1 & B2))))"
+    },
+    "leakage_power": {
+      "value": 131.584293,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.12873437877849292,
+      "unit": "ns"
+    }
+  },
+  "AOI222_X1": {
+    "area": {
+      "value": 2.128,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 & A2) | (B1 & B2)) | (C1 & C2))"
+    },
+    "leakage_power": {
+      "value": 47.398844,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.13433188690545197,
+      "unit": "ns"
+    }
+  },
+  "AOI222_X2": {
+    "area": {
+      "value": 3.724,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 & A2) | (B1 & B2)) | (C1 & C2))"
+    },
+    "leakage_power": {
+      "value": 94.797579,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.13556075984351323,
+      "unit": "ns"
+    }
+  },
+  "AOI222_X4": {
+    "area": {
+      "value": 3.724,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(!(!(((A1 & A2) | (B1 & B2)) | (C1 & C2))))"
+    },
+    "leakage_power": {
+      "value": 134.853561,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.14250376443081922,
+      "unit": "ns"
+    }
+  },
+  "BUF_X1": {
+    "area": {
+      "value": 0.798,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "A"
+    },
+    "leakage_power": {
+      "value": 21.438247,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03642942855742068,
+      "unit": "ns"
+    }
+  },
+  "BUF_X2": {
+    "area": {
+      "value": 1.064,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "A"
+    },
+    "leakage_power": {
+      "value": 43.06082,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03456738289481771,
+      "unit": "ns"
+    }
+  },
+  "BUF_X4": {
+    "area": {
+      "value": 1.862,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "A"
+    },
+    "leakage_power": {
+      "value": 86.121805,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.033376740675651884,
+      "unit": "ns"
+    }
+  },
+  "BUF_X8": {
+    "area": {
+      "value": 3.458,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "A"
+    },
+    "leakage_power": {
+      "value": 172.244545,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03370091103133048,
+      "unit": "ns"
+    }
+  },
+  "BUF_X16": {
+    "area": {
+      "value": 6.65,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "A"
+    },
+    "leakage_power": {
+      "value": 344.4881,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.033888661267817574,
+      "unit": "ns"
+    }
+  },
+  "BUF_X32": {
+    "area": {
+      "value": 13.034,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "A"
+    },
+    "leakage_power": {
+      "value": 688.9762,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03418336122020598,
+      "unit": "ns"
+    }
+  },
+  "CLKBUF_X1": {
+    "area": {
+      "value": 0.798,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "A"
+    },
+    "leakage_power": {
+      "value": 11.214093,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03908811502762191,
+      "unit": "ns"
+    }
+  },
+  "CLKBUF_X2": {
+    "area": {
+      "value": 1.064,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "A"
+    },
+    "leakage_power": {
+      "value": 22.91762,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03690561535492004,
+      "unit": "ns"
+    }
+  },
+  "CLKBUF_X3": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "A"
+    },
+    "leakage_power": {
+      "value": 30.558215,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03836385240193943,
+      "unit": "ns"
+    }
+  },
+  "INV_X1": {
+    "area": {
+      "value": 0.532,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!A"
+    },
+    "leakage_power": {
+      "value": 14.353185,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.030787218489851796,
+      "unit": "ns"
+    }
+  },
+  "INV_X2": {
+    "area": {
+      "value": 0.798,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!A"
+    },
+    "leakage_power": {
+      "value": 28.706376,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03025107627630355,
+      "unit": "ns"
+    }
+  },
+  "INV_X4": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!A"
+    },
+    "leakage_power": {
+      "value": 57.41285,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.029782740692632072,
+      "unit": "ns"
+    }
+  },
+  "INV_X8": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!A"
+    },
+    "leakage_power": {
+      "value": 114.826305,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.029567988206660824,
+      "unit": "ns"
+    }
+  },
+  "INV_X16": {
+    "area": {
+      "value": 4.522,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!A"
+    },
+    "leakage_power": {
+      "value": 229.651455,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.030069097824384456,
+      "unit": "ns"
+    }
+  },
+  "INV_X32": {
+    "area": {
+      "value": 8.778,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!A"
+    },
+    "leakage_power": {
+      "value": 459.3028,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.030253830985641265,
+      "unit": "ns"
+    }
+  },
+  "MUX2_X1": {
+    "area": {
+      "value": 1.862,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B",
+      "S"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "((S & B) | (A & !S))"
+    },
+    "leakage_power": {
+      "value": 35.92839,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.07072864808796506,
+      "unit": "ns"
+    }
+  },
+  "MUX2_X2": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B",
+      "S"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "((S & B) | (A & !S))"
+    },
+    "leakage_power": {
+      "value": 68.648566,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.08181868148250135,
+      "unit": "ns"
+    }
+  },
+  "NAND2_X1": {
+    "area": {
+      "value": 0.798,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A1 & A2)"
+    },
+    "leakage_power": {
+      "value": 17.39336,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.034052355743271485,
+      "unit": "ns"
+    }
+  },
+  "NAND2_X2": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A1 & A2)"
+    },
+    "leakage_power": {
+      "value": 34.78663,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.034095803706078225,
+      "unit": "ns"
+    }
+  },
+  "NAND2_X4": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A1 & A2)"
+    },
+    "leakage_power": {
+      "value": 69.57324,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.0331631759515627,
+      "unit": "ns"
+    }
+  },
+  "NAND3_X1": {
+    "area": {
+      "value": 1.064,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 & A2) & A3)"
+    },
+    "leakage_power": {
+      "value": 18.104768,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03774313350800198,
+      "unit": "ns"
+    }
+  },
+  "NAND3_X2": {
+    "area": {
+      "value": 1.862,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 & A2) & A3)"
+    },
+    "leakage_power": {
+      "value": 36.209558,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.03846606948803849,
+      "unit": "ns"
+    }
+  },
+  "NAND3_X4": {
+    "area": {
+      "value": 3.458,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 & A2) & A3)"
+    },
+    "leakage_power": {
+      "value": 72.419123,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.038994533312659466,
+      "unit": "ns"
+    }
+  },
+  "NAND4_X1": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 & A2) & A3) & A4)"
+    },
+    "leakage_power": {
+      "value": 18.126843,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.050525061063249804,
+      "unit": "ns"
+    }
+  },
+  "NAND4_X2": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 & A2) & A3) & A4)"
+    },
+    "leakage_power": {
+      "value": 36.253723,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.052694253990690894,
+      "unit": "ns"
+    }
+  },
+  "NAND4_X4": {
+    "area": {
+      "value": 4.788,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 & A2) & A3) & A4)"
+    },
+    "leakage_power": {
+      "value": 72.506878,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.049803533380493085,
+      "unit": "ns"
+    }
+  },
+  "NOR2_X1": {
+    "area": {
+      "value": 0.798,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A1 | A2)"
+    },
+    "leakage_power": {
+      "value": 21.199545,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.05833124013750842,
+      "unit": "ns"
+    }
+  },
+  "NOR2_X2": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A1 | A2)"
+    },
+    "leakage_power": {
+      "value": 42.399074,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.057853529618507316,
+      "unit": "ns"
+    }
+  },
+  "NOR2_X4": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A1 | A2)"
+    },
+    "leakage_power": {
+      "value": 84.798143,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.05820293808007655,
+      "unit": "ns"
+    }
+  },
+  "NOR3_X1": {
+    "area": {
+      "value": 1.064,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 | A2) | A3)"
+    },
+    "leakage_power": {
+      "value": 26.831667,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.0927834894311094,
+      "unit": "ns"
+    }
+  },
+  "NOR3_X2": {
+    "area": {
+      "value": 1.862,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 | A2) | A3)"
+    },
+    "leakage_power": {
+      "value": 53.663264,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.09464829285219169,
+      "unit": "ns"
+    }
+  },
+  "NOR3_X4": {
+    "area": {
+      "value": 3.724,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 | A2) | A3)"
+    },
+    "leakage_power": {
+      "value": 107.325918,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.0923313329224972,
+      "unit": "ns"
+    }
+  },
+  "NOR4_X1": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 | A2) | A3) | A4)"
+    },
+    "leakage_power": {
+      "value": 32.601474,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.13564636496450116,
+      "unit": "ns"
+    }
+  },
+  "NOR4_X2": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 | A2) | A3) | A4)"
+    },
+    "leakage_power": {
+      "value": 65.202889,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.13913294656530073,
+      "unit": "ns"
+    }
+  },
+  "NOR4_X4": {
+    "area": {
+      "value": 4.788,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 | A2) | A3) | A4)"
+    },
+    "leakage_power": {
+      "value": 130.405147,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.13488944758310462,
+      "unit": "ns"
+    }
+  },
+  "OAI21_X1": {
+    "area": {
+      "value": 1.064,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A & (B1 | B2))"
+    },
+    "leakage_power": {
+      "value": 22.619394,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.060761769228752094,
+      "unit": "ns"
+    }
+  },
+  "OAI21_X2": {
+    "area": {
+      "value": 1.862,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A & (B1 | B2))"
+    },
+    "leakage_power": {
+      "value": 45.238687,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.06011950175442664,
+      "unit": "ns"
+    }
+  },
+  "OAI21_X4": {
+    "area": {
+      "value": 3.458,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A & (B1 | B2))"
+    },
+    "leakage_power": {
+      "value": 90.477187,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.05994079104046943,
+      "unit": "ns"
+    }
+  },
+  "OAI22_X1": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 | A2) & (B1 | B2))"
+    },
+    "leakage_power": {
+      "value": 34.026125,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.0719510518878346,
+      "unit": "ns"
+    }
+  },
+  "OAI22_X2": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 | A2) & (B1 | B2))"
+    },
+    "leakage_power": {
+      "value": 68.052131,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.07229861141624278,
+      "unit": "ns"
+    }
+  },
+  "OAI22_X4": {
+    "area": {
+      "value": 4.522,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!((A1 | A2) & (B1 | B2))"
+    },
+    "leakage_power": {
+      "value": 136.103946,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.07251157332670011,
+      "unit": "ns"
+    }
+  },
+  "OAI33_X1": {
+    "area": {
+      "value": 1.862,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "B1",
+      "B2",
+      "B3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 | A2) | A3) & ((B1 | B2) | B3))"
+    },
+    "leakage_power": {
+      "value": 48.313952,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.12324468787687665,
+      "unit": "ns"
+    }
+  },
+  "OAI211_X1": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((C1 | C2) & A) & B)"
+    },
+    "leakage_power": {
+      "value": 22.039133,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.06275965873630332,
+      "unit": "ns"
+    }
+  },
+  "OAI211_X2": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((C1 | C2) & A) & B)"
+    },
+    "leakage_power": {
+      "value": 44.0782,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.06322996697623601,
+      "unit": "ns"
+    }
+  },
+  "OAI211_X4": {
+    "area": {
+      "value": 4.522,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((C1 | C2) & A) & B)"
+    },
+    "leakage_power": {
+      "value": 88.156278,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.06359581397875591,
+      "unit": "ns"
+    }
+  },
+  "OAI221_X1": {
+    "area": {
+      "value": 1.596,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((C1 | C2) & A) & (B1 | B2))"
+    },
+    "leakage_power": {
+      "value": 33.937672,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.07939011828138423,
+      "unit": "ns"
+    }
+  },
+  "OAI221_X2": {
+    "area": {
+      "value": 2.926,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((C1 | C2) & A) & (B1 | B2))"
+    },
+    "leakage_power": {
+      "value": 67.875298,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.081261968296624,
+      "unit": "ns"
+    }
+  },
+  "OAI221_X4": {
+    "area": {
+      "value": 3.458,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(!(!(((C1 | C2) & A) & (B1 | B2))))"
+    },
+    "leakage_power": {
+      "value": 116.346072,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.09389718806318414,
+      "unit": "ns"
+    }
+  },
+  "OAI222_X1": {
+    "area": {
+      "value": 2.128,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 | A2) & (B1 | B2)) & (C1 | C2))"
+    },
+    "leakage_power": {
+      "value": 43.177867,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.0848532702323264,
+      "unit": "ns"
+    }
+  },
+  "OAI222_X2": {
+    "area": {
+      "value": 3.724,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(((A1 | A2) & (B1 | B2)) & (C1 | C2))"
+    },
+    "leakage_power": {
+      "value": 86.355577,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.0858660670202808,
+      "unit": "ns"
+    }
+  },
+  "OAI222_X4": {
+    "area": {
+      "value": 3.724,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(!(!(((A1 | A2) & (B1 | B2)) & (C1 | C2))))"
+    },
+    "leakage_power": {
+      "value": 127.97856,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.10053599269439482,
+      "unit": "ns"
+    }
+  },
+  "OR2_X1": {
+    "area": {
+      "value": 1.064,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(A1 | A2)"
+    },
+    "leakage_power": {
+      "value": 22.694975,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.058996254540162836,
+      "unit": "ns"
+    }
+  },
+  "OR2_X2": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(A1 | A2)"
+    },
+    "leakage_power": {
+      "value": 45.656022,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.0556908267175429,
+      "unit": "ns"
+    }
+  },
+  "OR2_X4": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(A1 | A2)"
+    },
+    "leakage_power": {
+      "value": 91.312375,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.05455304919205181,
+      "unit": "ns"
+    }
+  },
+  "OR3_X1": {
+    "area": {
+      "value": 1.33,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "((A1 | A2) | A3)"
+    },
+    "leakage_power": {
+      "value": 24.414625,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.09039134742317645,
+      "unit": "ns"
+    }
+  },
+  "OR3_X2": {
+    "area": {
+      "value": 1.596,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "((A1 | A2) | A3)"
+    },
+    "leakage_power": {
+      "value": 49.162437,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.08476840556095042,
+      "unit": "ns"
+    }
+  },
+  "OR3_X4": {
+    "area": {
+      "value": 2.926,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "((A1 | A2) | A3)"
+    },
+    "leakage_power": {
+      "value": 98.32515,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.08198057787719323,
+      "unit": "ns"
+    }
+  },
+  "OR4_X1": {
+    "area": {
+      "value": 1.596,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(((A1 | A2) | A3) | A4)"
+    },
+    "leakage_power": {
+      "value": 26.73349,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.12625499964484857,
+      "unit": "ns"
+    }
+  },
+  "OR4_X2": {
+    "area": {
+      "value": 1.862,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(((A1 | A2) | A3) | A4)"
+    },
+    "leakage_power": {
+      "value": 53.869509,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.11827926994061587,
+      "unit": "ns"
+    }
+  },
+  "OR4_X4": {
+    "area": {
+      "value": 3.458,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "(((A1 | A2) | A3) | A4)"
+    },
+    "leakage_power": {
+      "value": 107.739253,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.11654536997787854,
+      "unit": "ns"
+    }
+  },
+  "XNOR2_X1": {
+    "area": {
+      "value": 1.596,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A ^ B)"
+    },
+    "leakage_power": {
+      "value": 36.441009,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.0767530700983877,
+      "unit": "ns"
+    }
+  },
+  "XNOR2_X2": {
+    "area": {
+      "value": 2.66,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B"
+    ],
+    "outputs": [
+      "ZN"
+    ],
+    "functions": {
+      "ZN": "!(A ^ B)"
+    },
+    "leakage_power": {
+      "value": 73.102975,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.07320381609202219,
+      "unit": "ns"
+    }
+  },
+  "XOR2_X1": {
+    "area": {
+      "value": 1.596,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "(A ^ B)"
+    },
+    "leakage_power": {
+      "value": 36.163718,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.08746579941027413,
+      "unit": "ns"
+    }
+  },
+  "XOR2_X2": {
+    "area": {
+      "value": 2.394,
+      "unit": "um^2"
+    },
+    "inputs": [
+      "A",
+      "B"
+    ],
+    "outputs": [
+      "Z"
+    ],
+    "functions": {
+      "Z": "(A ^ B)"
+    },
+    "leakage_power": {
+      "value": 72.593483,
+      "unit": "nW"
+    },
+    "delay": {
+      "value": 0.0863626566185462,
+      "unit": "ns"
+    }
+  }
+}
