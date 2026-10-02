@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="546pt" height="149pt" viewBox="0.00 0.00 546.00 148.80">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 144.8)">
+<title>circuit</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-144.8 542,-144.8 542,4 -4,4" />
+<text text-anchor="middle" x="269" y="-124.2" font-family="Times,serif" font-size="14.00">Gate symbols preview</text>
+
+<g id="node1" class="node">
+<title>n0</title>
+<g id="a_node1"><a ns1:title="Node 0: INPUT">
+<polygon fill="#dbeafe" stroke="none" points="0,-36 0,-58 76,-58 76,-36 0,-36" />
+<text text-anchor="start" x="34.67" y="-44" font-family="Arial" font-size="10.00">A</text>
+<polygon fill="none" stroke="#334155" points="0,-36 0,-58 76,-58 76,-36 0,-36" />
+</a>
+</g>
+</g>
+
+<g id="node3" class="node">
+<title>n2</title>
+<g id="a_node3"><a ns1:title="Node 2: AND">
+<polygon fill="white" stroke="none" points="119,-55 119,-95 181,-95 181,-55 119,-55" />
+</a>
+</g>
+<svg width="60" height="40" viewBox="0 0 60 40" x="120.0" y="-95.0">
+  <g stroke="#334155" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M0 10H3 M0 30H3 M56 20H60" fill="none" />
+    <path d="M3 2H38A18 18 0 0 1 38 38H3Z" fill="#f1f1f1" />
+  </g>
+</svg></g>
+
+<g id="edge1" class="edge">
+<title>n0:e-&gt;n2:w</title>
+<g id="a_edge1"><a ns1:title="Node 0 -&gt; Node 2, input port 0">
+<path fill="none" stroke="#64748b" d="M76,-47C76,-47 119,-85 119,-85" />
+</a>
+</g>
+</g>
+
+<g id="node4" class="node">
+<title>n3</title>
+<g id="a_node4"><a ns1:title="Node 3: NAND">
+<polygon fill="white" stroke="none" points="119,-1 119,-41 181,-41 181,-1 119,-1" />
+</a>
+</g>
+<svg width="60" height="40" viewBox="0 0 60 40" x="120.0" y="-41.0">
+  <g stroke="#334155" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M0 10H3 M0 30H3 M56 20H60" fill="none" />
+    <path d="M3 4H34A16 16 0 0 1 34 36H3Z" fill="#f1f1f1" />
+    <circle cx="53" cy="20" r="3" fill="white" />
+  </g>
+</svg></g>
+
+<g id="edge3" class="edge">
+<title>n0:e-&gt;n3:w</title>
+<g id="a_edge3"><a ns1:title="Node 0 -&gt; Node 3, input port 0">
+<path fill="none" stroke="#64748b" d="M76,-47C76,-47 119,-31 119,-31" />
+</a>
+</g>
+</g>
+
+<g id="node2" class="node">
+<title>n1</title>
+<g id="a_node2"><a ns1:title="Node 1: INPUT">
+<polygon fill="#dbeafe" stroke="none" points="0,0 0,-22 76,-22 76,0 0,0" />
+<text text-anchor="start" x="34.67" y="-8" font-family="Arial" font-size="10.00">B</text>
+<polygon fill="none" stroke="#334155" points="0,0 0,-22 76,-22 76,0 0,0" />
+</a>
+</g>
+</g>
+
+<g id="edge2" class="edge">
+<title>n1:e-&gt;n2:w</title>
+<g id="a_edge2"><a ns1:title="Node 1 -&gt; Node 2, input port 1">
+<path fill="none" stroke="#64748b" d="M76,-11C76,-11 119,-65 119,-65" />
+</a>
+</g>
+</g>
+
+<g id="edge4" class="edge">
+<title>n1:e-&gt;n3:w</title>
+<g id="a_edge4"><a ns1:title="Node 1 -&gt; Node 3, input port 1">
+<path fill="none" stroke="#64748b" d="M76,-11C76,-11 119,-11 119,-11" />
+</a>
+</g>
+</g>
+
+<g id="node5" class="node">
+<title>n4</title>
+<g id="a_node5"><a ns1:title="Node 4: INV">
+<polygon fill="white" stroke="none" points="231,-76 231,-116 293,-116 293,-76 231,-76" />
+</a>
+</g>
+<svg width="60" height="40" viewBox="0 0 60 40" x="232.0" y="-116.0">
+  <g stroke="#334155" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M0 20H3 M56 20H60" fill="none" />
+    <path d="M3 3L50 20L3 37Z" fill="#f1f1f1" />
+    <circle cx="53" cy="20" r="3" fill="white" />
+  </g>
+</svg></g>
+
+<g id="edge5" class="edge">
+<title>n2:e-&gt;n4:w</title>
+<g id="a_edge5"><a ns1:title="Node 2 -&gt; Node 4, input port 0">
+<path fill="none" stroke="#64748b" d="M181,-75C181,-75 230,-96 230,-96" />
+</a>
+</g>
+</g>
+
+<g id="node6" class="node">
+<title>n5</title>
+<g id="a_node6"><a ns1:title="Node 5: OR">
+<polygon fill="#fef9c3" stroke="none" points="343,-43 343,-85 419,-85 419,-43 343,-43" />
+<text text-anchor="start" x="373.5" y="-61" font-family="Arial" font-size="10.00">OR</text>
+<polygon fill="none" stroke="#334155" points="343,-43 343,-85 419,-85 419,-43 343,-43" />
+</a>
+</g>
+</g>
+
+<g id="edge7" class="edge">
+<title>n3:e-&gt;n5:w</title>
+<g id="a_edge7"><a ns1:title="Node 3 -&gt; Node 5, input port 1">
+<path fill="none" stroke="#64748b" d="M181,-21C181,-21 344,-54 344,-54" />
+</a>
+</g>
+</g>
+
+<g id="node8" class="node">
+<title>n7</title>
+<g id="a_node8"><a ns1:title="Node 7: OUTPUT">
+<polygon fill="#dcfce7" stroke="none" points="224,-10 224,-32 300,-32 300,-10 224,-10" />
+<text text-anchor="start" x="258.95" y="-18" font-family="Arial" font-size="10.00">Z</text>
+<polygon fill="none" stroke="#334155" points="224,-10 224,-32 300,-32 300,-10 224,-10" />
+</a>
+</g>
+</g>
+
+<g id="edge9" class="edge">
+<title>n3:e-&gt;n7:w</title>
+<g id="a_edge9"><a ns1:title="Node 3 -&gt; Node 7, input port 0">
+<path fill="none" stroke="#64748b" d="M181,-21C181,-21 224,-21 224,-21" />
+</a>
+</g>
+</g>
+
+<g id="edge6" class="edge">
+<title>n4:e-&gt;n5:w</title>
+<g id="a_edge6"><a ns1:title="Node 4 -&gt; Node 5, input port 0">
+<path fill="none" stroke="#64748b" d="M294,-96C294,-96 343,-74 343,-74" />
+</a>
+</g>
+</g>
+
+<g id="node7" class="node">
+<title>n6</title>
+<g id="a_node7"><a ns1:title="Node 6: OUTPUT">
+<polygon fill="#dcfce7" stroke="none" points="462,-53 462,-75 538,-75 538,-53 462,-53" />
+<text text-anchor="start" x="496.67" y="-61" font-family="Arial" font-size="10.00">Y</text>
+<polygon fill="none" stroke="#334155" points="462,-53 462,-75 538,-75 538,-53 462,-53" />
+</a>
+</g>
+</g>
+
+<g id="edge8" class="edge">
+<title>n5:e-&gt;n6:w</title>
+<g id="a_edge8"><a ns1:title="Node 5 -&gt; Node 6, input port 0">
+<path fill="none" stroke="#64748b" d="M419,-64C419,-64 462,-64 462,-64" />
+</a>
+</g>
+</g>
+</g>
+</svg>

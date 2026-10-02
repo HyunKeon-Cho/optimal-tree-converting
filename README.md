@@ -1,5 +1,26 @@
 # Optimal Tree Converting
 
+## 회로 프리뷰
+
+```sh
+python utiles/graph2dot.py --fast --svg
+```
+
+기본 입력은 `input/adder.json`이며 `input/adder.dot`과 `input/adder.svg`를 생성한다.
+AND, NAND, NOT(`INV`) 기호는 `utiles/symbols/and.svg`, `nand.svg`, `not.svg`에서 수정한다.
+나머지 노드는 종류별 색상의 사각형으로 표시한다. 입력 포트는 왼쪽에 나누어 배치하고 출력 포트는 오른쪽에 둔다.
+`--fast`는 배치 최적화 반복 횟수를 줄이고 연결선을 직선으로 표시한다.
+
+SVG 생성에는 Graphviz의 `dot`, 또는 Node.js와 설치된 VS Code Interactive Graphviz 확장이 필요하다.
+후자의 경우 확장에 포함된 WebAssembly를 사용하며 확장 파일을 수정하지 않는다.
+생성된 회로 SVG에는 기호가 내장되므로 브라우저에서 바로 열 수 있다.
+현재 Interactive Graphviz 0.3.5의 DOT 프리뷰는 로컬 SVG 기호를 직접 표시하지 못한다.
+해당 프리뷰에서 연결 추적이 필요하면 이미지 없는 박스 모드를 사용한다.
+
+```sh
+python utiles/graph2dot.py --fast --basic -o input/adder-basic.dot
+```
+
 논리 회로를 셀 라이브러리로 매핑할 때 면적, 대표 누설전력, 지연의 가중치 합을 최소화하는 초기 비용 모델을 사용한다.
 현재 `s1_ahoCorasick.py`, `s2_main.py`의 매핑 알고리즘은 미구현이다. 이 문서는 `utiles/lib2json.py`의 데이터 필터링 및 상수 추출 기준을 정의한다.
 
