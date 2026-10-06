@@ -7,32 +7,38 @@ LOGIC_GATE = {
     "INV": 0b10,
 }
 
+"""
+dp <- 이 노드가 끝단이라 가정할때 best case
+dfs return 
+"""
+
 def mergeTable(i, o): pass
 
 def dfs(op):
-    
     global dp, lib, module, ahoCorasick
     
-    # redundnat
-    if (dp.get(op)):
-        pass
-    
-    # DP
+    # get sub tree
     port = module["node"][op]
-    subTree = {
-        "input": 0,
-        "table": 0,
-    }
+    subTree = []
+    # { "table", "output", "node", "edge" }
     
-    # search sub tree
-    if (len(port["output"]) == 1): # output mult connet
+    if (dp.get(op)):
+        subTree = dp[op] 
+    
+    elif (len(port["output"]) == 1): # output mult connet
         for i in port["input"]:
             sub = dfs(i)
             subTree.append(sub)
         
-    
     # marge
-    table = LOGIC_GATE[port["op"]]
+    tree = []
+    table = [
+        [
+              port["output"] 
+            , LOGIC_GATE[port["op"]]
+        ]
+    ]
+    
     if (sum([p["input"]] for p in subTree) <= 6): # gate input N limit
         mergeTable(subTree, table)
     else:
