@@ -1,25 +1,65 @@
 # Optimal Tree Converting
 
-## 회로 프리뷰
+## 디지털 회로도
 
 ```sh
-python utiles/graph2dot.py --fast --svg
+python utiles/graph2dot.py input/toy.json --svg
 ```
 
-기본 입력은 `input/adder.json`이며 `input/adder.dot`과 `input/adder.svg`를 생성한다.
-AND, NAND, NOT(`INV`) 기호는 `utiles/symbols/and.svg`, `nand.svg`, `not.svg`에서 수정한다.
-나머지 노드는 종류별 색상의 사각형으로 표시한다. 입력 포트는 왼쪽에 나누어 배치하고 출력 포트는 오른쪽에 둔다.
-`--fast`는 배치 최적화 반복 횟수를 줄이고 연결선을 직선으로 표시한다.
+JSON의 DAG에서 일반 프리뷰용 DOT과, 직접 배치·배선한 독립적인 SVG 회로도를 생성한다. 기본 DOT는 외부 이미지나 고정 좌표 없이 종류/이름이 적힌 박스로 표시하므로 VS Code DOT 프리뷰에서 바로 볼 수 있다. 정밀한 게이트 기호, 핀 접점과 교차 점프는 `--svg` 결과에서 확인한다.
+기본 입력은 `input/adder.json`이며 결과는 입력 옆에 `.dot`, `--svg`를 지정하면 `.svg`로 저장한다.
+SVG 생성에는 Graphviz, Node.js, 외부 Python 패키지가 필요하지 않는다.
 
-SVG 생성에는 Graphviz의 `dot`, 또는 Node.js와 설치된 VS Code Interactive Graphviz 확장이 필요하다.
-후자의 경우 확장에 포함된 WebAssembly를 사용하며 확장 파일을 수정하지 않는다.
-생성된 회로 SVG에는 기호가 내장되므로 브라우저에서 바로 열 수 있다.
-현재 Interactive Graphviz 0.3.5의 DOT 프리뷰는 로컬 SVG 기호를 직접 표시하지 못한다.
-해당 프리뷰에서 연결 추적이 필요하면 이미지 없는 박스 모드를 사용한다.
+`input/library.json`의 모든 셀 이름을 노드 `op`에 사용할 수 있다.
+`op: "CELL"`과 `cell: "AOI21_X1"` 형식도 지원하며 입력 포트 번호는 라이브러리 `inputs` 순서에 대응한다.
+AND, NAND, OR, NOR, XOR, XNOR, INV, BUF 계열은 SVG 논리 기호로 표시하고, AOI, OAI, MUX 등의 다른 셀은 셀 이름만 적힌 박스로 표시한다.
+INPUT/OUTPUT은 포트 이름, CONST는 0 또는 1을 표시한다. 모든 출력 포트는 오른쪽 끝 열에 모으고 JSON `outputs` 배열 순서대로 위에서 아래로 배치한다. 출력 박스 폭은 가장 긴 출력 이름에 맞춰 통일하여 양쪽 경계를 정렬한다. `outputs`가 없으면 노드 배열의 출력 순서를 사용한다.
+기초 게이트의 인스턴스 이름은 기호에 표시하지 않는다.
+
+모든 와이어는 수평·수직 선분으로 배선한다. 기호와 박스에는 별도의 핀 돌출선을 그리지 않으며, 와이어 끝점은 기호 경계와 일치한다.
+공유 출력의 분기점에는 접속 점을 표시한다. SVG에서 서로 다른 신호의 교차에는 작은 점프 표시를 넣으며, 같은 신호의 분기에는 점프를 넣지 않는다. 점 없는 선 교차는 전기적 접속을 뜻하지 않는다.
+긴 연결에는 중간 배선 슬롯을 배정하여 다른 셀을 통과하지 않도록 한다. 배선 후 일직선 구간을 합치고, 다른 셀 또는 다른 신호의 배선과 겹치지 않는 경우 불필요한 계단식 경로를 더 짧은 경로로 바꾼다.
+
+`--fast`는 배치 정렬 횟수만 줄이며 직각 배선을 유지한다.
+`--basic`은 모든 게이트를 이름/종류가 적힌 박스로 표시한다.
+`-o`로 DOT 출력 경로를 지정할 수 있다.
+
+기본 DOT는 Graphviz `dot` 엔진과 직각 배선을 사용한다.
+예전 고정 좌표 DOT가 필요하면 `--fixed-dot`을 지정하고 `neato -n2`로 렌더링한다.
+이 형식은 일반 DOT 프리뷰용이 아니며 로컬 SVG 이미지 로딩 지원도 필요하다.
 
 ```sh
-python utiles/graph2dot.py --fast --basic -o input/adder-basic.dot
+python utiles/graph2dot.py input/toy.json --svg
+python utiles/graph2dot.py input/toy.json --fixed-dot -o input/toy-fixed.dot
+neato -n2 -Tsvg input/toy-fixed.dot -o input/toy-graphviz.svg
 ```
+
+고정 좌표 DOT의 기초 게이트 이미지는 `utiles/symbols/schematic/`에 생성한다.
+SVG 회로도는 모든 기호를 내장하여 이 디렉터리 없이도 열 수 있다.
+
+### Python에서 함수로 사용
+
+저장소 루트에서 다른 Python 코드에 import하여 사용할 수 있다.
+
+```python
+from utiles.graph2dot import render_schematic, export_schematic
+
+# JSON 경로 또는 이미 읽은 graph 딕셔너리를 받는다. 파일을 쓰지 않는다.
+rendered = render_schematic("input/toy.json")
+dot_text = rendered["dot"]
+svg_text = rendered["svg"]
+
+# 파일로 저장하고 생성 경로와 노드/연결 수를 반환한다.
+result = export_schematic("input/toy.json", "input/toy.dot", with_svg=True)
+print(result["dot_path"], result["svg_path"])
+```
+
+두 함수 모두 `fast`, `basic`, `fixed_dot` 키워드 옵션을 지원한다.
+`export_schematic`은 기본적으로 SVG도 저장하며 `with_svg=False`로 DOT만 저장할 수 있다.
+JSON 경로를 넘기면 출력 경로를 생략할 수 있고 입력 옆에 저장한다. 그래프 딕셔너리를 넘길 때는 출력 경로를 지정한다.
+상대 경로는 호출하는 코드의 현재 작업 폴더를 기준으로 해석한다.
+import와 `render_schematic`은 파일을 생성하거나 메시지를 출력하지 않으며, 오류는 예외로 전달한다.
+기존 CLI 명령은 동일하게 사용할 수 있다.
 
 논리 회로를 셀 라이브러리로 매핑할 때 면적, 대표 누설전력, 지연의 가중치 합을 최소화하는 초기 비용 모델을 사용한다.
 현재 `s1_ahoCorasick.py`, `s2_main.py`의 매핑 알고리즘은 미구현이다. 이 문서는 `utiles/lib2json.py`의 데이터 필터링 및 상수 추출 기준을 정의한다.
