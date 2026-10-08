@@ -1,5 +1,5 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "source": "toy",
   "inputs": [
     {
@@ -34,92 +34,92 @@
   "outputs": [
     {
       "name": "direct_a",
-      "node": 55
+      "edge": 69
     },
     {
       "name": "inverted_a",
-      "node": 56
+      "edge": 70
     },
     {
       "name": "and2",
-      "node": 57
+      "edge": 71
     },
     {
       "name": "nand2",
-      "node": 58
+      "edge": 72
     },
     {
       "name": "or2",
-      "node": 59
+      "edge": 73
     },
     {
       "name": "nor2",
-      "node": 60
+      "edge": 74
     },
     {
       "name": "xor2",
-      "node": 61
+      "edge": 75
     },
     {
       "name": "xnor2",
-      "node": 62
+      "edge": 76
     },
     {
       "name": "mux2",
-      "node": 63
+      "edge": 77
     },
     {
       "name": "aoi21",
-      "node": 64
+      "edge": 78
     },
     {
       "name": "oai21",
-      "node": 65
+      "edge": 79
     },
     {
       "name": "and6_cut_boundary",
-      "node": 66
+      "edge": 80
     },
     {
       "name": "and7_requires_multiple_cells",
-      "node": 67
+      "edge": 81
     },
     {
       "name": "shared_reconvergence",
-      "node": 68
+      "edge": 82
     },
     {
       "name": "repeated_fanin",
-      "node": 69
+      "edge": 83
     },
     {
       "name": "contradiction_zero",
-      "node": 70
+      "edge": 84
     },
     {
       "name": "constant_zero_operand",
-      "node": 71
+      "edge": 85
     },
     {
       "name": "constant_one_operand",
-      "node": 72
+      "edge": 86
     },
     {
       "name": "double_inversion",
-      "node": 73
+      "edge": 87
     },
     {
       "name": "constant_zero_output",
-      "node": 74
+      "edge": 88
     },
     {
       "name": "constant_one_output",
-      "node": 75
+      "edge": 89
     }
   ],
   "nodes": [
     {
-      "op": "CONST",
+      "op": "CONST_0",
       "name": "const_zero",
       "value": false,
       "input": [],

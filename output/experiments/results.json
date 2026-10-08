@@ -1,0 +1,416 @@
+{
+  "settings": {
+    "area": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "leakage": [
+      0.1,
+      0.8,
+      0.1
+    ],
+    "delay": [
+      0.1,
+      0.1,
+      0.8
+    ],
+    "balanced": [
+      0.34,
+      0.33,
+      0.33
+    ]
+  },
+  "source_sha256": {
+    "main.py": "5971b0c1a563f3240da456394839c65764606f5fe82e55d286ede567c4e499bc",
+    "Cell.py": "a62298c11771767e7acc705134189db102b9c335db2a40959d49dbe30bf8cef3",
+    "input/library.json": "47346ecb377d1a92ef99d7d95dbe43ffb06dba885f32718e930194f15f8f5533"
+  },
+  "circuits": {
+    "toy": {
+      "source_sha256": "10101033cc4be15686729f88db998e0797f128e3f41583503549f6a569b28985",
+      "outline": {
+        "inputs": 7,
+        "outputs": 21,
+        "nodes": 76,
+        "edges": 90
+      },
+      "runs": {
+        "area": {
+          "weights": [
+            0.8,
+            0.1,
+            0.1
+          ],
+          "metrics": {
+            "cells": 27,
+            "area": 22.078000000000003,
+            "leakage_power": 543.2561069999999,
+            "delay": 0.17382675206984527,
+            "cell_counts": {
+              "INV_X1": 12,
+              "AND2_X1": 7,
+              "NOR2_X1": 2,
+              "AOI22_X1": 2,
+              "NAND2_X1": 1,
+              "AND3_X1": 1,
+              "OAI21_X1": 1,
+              "BUF_X1": 1
+            }
+          },
+          "elapsed_seconds": 0.01599999999962165,
+          "graph": "output/experiments/toy_area.json"
+        },
+        "leakage": {
+          "weights": [
+            0.1,
+            0.8,
+            0.1
+          ],
+          "metrics": {
+            "cells": 28,
+            "area": 22.61,
+            "leakage_power": 538.2469039999999,
+            "delay": 0.17382675206984527,
+            "cell_counts": {
+              "INV_X1": 11,
+              "AND2_X1": 7,
+              "NOR2_X1": 2,
+              "AOI22_X1": 1,
+              "NAND2_X1": 4,
+              "AND3_X1": 1,
+              "OAI21_X1": 1,
+              "CLKBUF_X1": 1
+            }
+          },
+          "elapsed_seconds": 0.031000000002677552,
+          "graph": "output/experiments/toy_leakage.json"
+        },
+        "delay": {
+          "weights": [
+            0.1,
+            0.1,
+            0.8
+          ],
+          "metrics": {
+            "cells": 30,
+            "area": 26.866000000000003,
+            "leakage_power": 836.5356640000002,
+            "delay": 0.16802087687895886,
+            "cell_counts": {
+              "INV_X1": 10,
+              "AND2_X2": 9,
+              "NOR2_X1": 2,
+              "AOI22_X1": 1,
+              "NAND2_X1": 7,
+              "BUF_X2": 1
+            }
+          },
+          "elapsed_seconds": 0.01599999999962165,
+          "graph": "output/experiments/toy_delay.json"
+        },
+        "balanced": {
+          "weights": [
+            0.34,
+            0.33,
+            0.33
+          ],
+          "metrics": {
+            "cells": 28,
+            "area": 22.61,
+            "leakage_power": 548.4710579999999,
+            "delay": 0.17382675206984527,
+            "cell_counts": {
+              "INV_X1": 11,
+              "AND2_X1": 7,
+              "NOR2_X1": 2,
+              "AOI22_X1": 1,
+              "NAND2_X1": 4,
+              "AND3_X1": 1,
+              "OAI21_X1": 1,
+              "BUF_X1": 1
+            }
+          },
+          "elapsed_seconds": 0.030999999999039574,
+          "graph": "output/experiments/toy_balanced.json"
+        }
+      },
+      "original": {
+        "cells": 47,
+        "area": 36.708,
+        "leakage_power": 910.283033,
+        "delay": 0.2041486132429704,
+        "cell_counts": {
+          "INV_X1": 25,
+          "AND2_X1": 22
+        }
+      }
+    },
+    "adder": {
+      "source_sha256": "630027c2e53220dfc49d22c6cfbc8e0081e270a3cc396930837410ad813eb1cc",
+      "outline": {
+        "inputs": 256,
+        "outputs": 129,
+        "nodes": 2556,
+        "edges": 3319
+      },
+      "runs": {
+        "area": {
+          "weights": [
+            0.8,
+            0.1,
+            0.1
+          ],
+          "metrics": {
+            "cells": 1270,
+            "area": 1048.8380000000054,
+            "leakage_power": 25913.006668999747,
+            "delay": 13.43754760827481,
+            "cell_counts": {
+              "XOR2_X1": 2,
+              "AND2_X1": 381,
+              "INV_X1": 506,
+              "NOR2_X1": 127,
+              "NAND2_X1": 128,
+              "AOI22_X1": 126
+            }
+          },
+          "elapsed_seconds": 0.3120000000017171,
+          "graph": "output/experiments/adder_area.json"
+        },
+        "leakage": {
+          "weights": [
+            0.1,
+            0.8,
+            0.1
+          ],
+          "metrics": {
+            "cells": 1270,
+            "area": 1048.8380000000054,
+            "leakage_power": 25913.006668999747,
+            "delay": 13.43754760827481,
+            "cell_counts": {
+              "XOR2_X1": 2,
+              "AND2_X1": 381,
+              "INV_X1": 506,
+              "NOR2_X1": 127,
+              "NAND2_X1": 128,
+              "AOI22_X1": 126
+            }
+          },
+          "elapsed_seconds": 0.2809999999990396,
+          "graph": "output/experiments/adder_leakage.json"
+        },
+        "delay": {
+          "weights": [
+            0.1,
+            0.1,
+            0.8
+          ],
+          "metrics": {
+            "cells": 1270,
+            "area": 1150.1840000000077,
+            "leakage_power": 35547.39024499966,
+            "delay": 13.174167988076533,
+            "cell_counts": {
+              "XOR2_X1": 2,
+              "AND2_X2": 381,
+              "INV_X1": 506,
+              "NOR2_X1": 127,
+              "NAND2_X1": 128,
+              "AOI22_X1": 126
+            }
+          },
+          "elapsed_seconds": 0.3600000000005821,
+          "graph": "output/experiments/adder_delay.json"
+        },
+        "balanced": {
+          "weights": [
+            0.34,
+            0.33,
+            0.33
+          ],
+          "metrics": {
+            "cells": 1270,
+            "area": 1048.8380000000054,
+            "leakage_power": 25913.006668999747,
+            "delay": 13.43754760827481,
+            "cell_counts": {
+              "XOR2_X1": 2,
+              "AND2_X1": 381,
+              "INV_X1": 506,
+              "NOR2_X1": 127,
+              "NAND2_X1": 128,
+              "AOI22_X1": 126
+            }
+          },
+          "elapsed_seconds": 0.4059999999990396,
+          "graph": "output/experiments/adder_balanced.json"
+        }
+      },
+      "original": {
+        "cells": 2170,
+        "area": 1697.0799999999056,
+        "leakage_power": 42073.5480299996,
+        "delay": 18.208994692056375,
+        "cell_counts": {
+          "AND2_X1": 1020,
+          "INV_X1": 1150
+        }
+      }
+    },
+    "log2": {
+      "source_sha256": "ad39ecfb2c08b0631b05302ce963962d96dbcd69c2c59cef0d5d8839af480fb6",
+      "outline": {
+        "inputs": 32,
+        "outputs": 32,
+        "nodes": 54559,
+        "edges": 86586
+      },
+      "runs": {
+        "area": {
+          "weights": [
+            0.8,
+            0.1,
+            0.1
+          ],
+          "metrics": {
+            "cells": 41454,
+            "area": 36000.17399997203,
+            "leakage_power": 855817.6212234437,
+            "delay": 26.943867109761282,
+            "cell_counts": {
+              "INV_X1": 16392,
+              "AND2_X1": 19324,
+              "AND4_X1": 1342,
+              "AND3_X1": 554,
+              "NAND2_X1": 1931,
+              "AOI22_X1": 247,
+              "AOI222_X1": 239,
+              "NAND3_X1": 17,
+              "NOR2_X1": 209,
+              "OAI21_X1": 1105,
+              "AOI21_X1": 30,
+              "OR2_X1": 17,
+              "NOR3_X1": 42,
+              "NOR4_X1": 3,
+              "AOI211_X1": 1,
+              "AOI221_X1": 1
+            }
+          },
+          "elapsed_seconds": 62.18799999999828,
+          "graph": "output/experiments/log2_area.json"
+        },
+        "leakage": {
+          "weights": [
+            0.1,
+            0.8,
+            0.1
+          ],
+          "metrics": {
+            "cells": 41511,
+            "area": 36017.99599997216,
+            "leakage_power": 856046.9657504415,
+            "delay": 26.986496416911855,
+            "cell_counts": {
+              "INV_X1": 16313,
+              "AND2_X1": 19335,
+              "AND4_X1": 1342,
+              "AND3_X1": 552,
+              "NAND2_X1": 2084,
+              "AOI222_X1": 183,
+              "NAND3_X1": 17,
+              "NOR2_X1": 208,
+              "AOI22_X1": 283,
+              "OAI21_X1": 1105,
+              "AOI21_X1": 16,
+              "OR2_X1": 17,
+              "NOR3_X1": 27,
+              "NOR4_X1": 28,
+              "AOI211_X1": 1
+            }
+          },
+          "elapsed_seconds": 65.48400000000038,
+          "graph": "output/experiments/log2_leakage.json"
+        },
+        "delay": {
+          "weights": [
+            0.1,
+            0.1,
+            0.8
+          ],
+          "metrics": {
+            "cells": 42157,
+            "area": 38356.66799996921,
+            "leakage_power": 1052098.930063394,
+            "delay": 26.75161258927158,
+            "cell_counts": {
+              "INV_X1": 16070,
+              "AND2_X2": 5239,
+              "AND4_X2": 1147,
+              "AND3_X2": 753,
+              "NAND2_X1": 2419,
+              "AOI21_X1": 371,
+              "NAND3_X1": 17,
+              "NOR2_X1": 212,
+              "OAI21_X1": 1105,
+              "AOI22_X1": 107,
+              "OR2_X2": 18,
+              "INV_X2": 9,
+              "AND2_X1": 14592,
+              "AND3_X1": 7,
+              "NOR3_X1": 81,
+              "AOI221_X1": 1,
+              "AOI222_X1": 7,
+              "NOR4_X1": 2
+            }
+          },
+          "elapsed_seconds": 61.78099999999904,
+          "graph": "output/experiments/log2_delay.json"
+        },
+        "balanced": {
+          "weights": [
+            0.34,
+            0.33,
+            0.33
+          ],
+          "metrics": {
+            "cells": 41694,
+            "area": 36109.76599997206,
+            "leakage_power": 859534.9898994386,
+            "delay": 26.92381070675957,
+            "cell_counts": {
+              "INV_X1": 16252,
+              "AND2_X1": 19453,
+              "AND4_X1": 1253,
+              "AND3_X1": 685,
+              "NAND2_X1": 2157,
+              "AOI221_X1": 170,
+              "NAND3_X1": 17,
+              "NOR2_X1": 208,
+              "AOI22_X1": 303,
+              "OAI21_X1": 1105,
+              "AOI21_X1": 15,
+              "OR2_X1": 17,
+              "NOR3_X1": 49,
+              "NOR4_X1": 8,
+              "AOI211_X1": 2
+            }
+          },
+          "elapsed_seconds": 73.32800000000134,
+          "graph": "output/experiments/log2_balanced.json"
+        }
+      },
+      "original": {
+        "cells": 54494,
+        "area": 46046.72799996111,
+        "leakage_power": 1125617.3641300509,
+        "delay": 28.6651069369296,
+        "cell_counts": {
+          "AND2_X1": 32060,
+          "INV_X1": 22434
+        }
+      }
+    }
+  }
+}

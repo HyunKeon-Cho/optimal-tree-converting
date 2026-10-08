@@ -1,0 +1,1095 @@
+{
+  "schema_version": 5,
+  "source": "toy_opt",
+  "inputs": [
+    {
+      "name": "a",
+      "node": 0
+    },
+    {
+      "name": "b",
+      "node": 1
+    },
+    {
+      "name": "c",
+      "node": 2
+    },
+    {
+      "name": "d",
+      "node": 3
+    },
+    {
+      "name": "e",
+      "node": 4
+    },
+    {
+      "name": "f",
+      "node": 5
+    },
+    {
+      "name": "s",
+      "node": 6
+    }
+  ],
+  "outputs": [
+    {
+      "name": "direct_a",
+      "edge": 0
+    },
+    {
+      "name": "inverted_a",
+      "edge": 2
+    },
+    {
+      "name": "and2",
+      "edge": 5
+    },
+    {
+      "name": "nand2",
+      "edge": 7
+    },
+    {
+      "name": "or2",
+      "edge": 11
+    },
+    {
+      "name": "nor2",
+      "edge": 13
+    },
+    {
+      "name": "xor2",
+      "edge": 20
+    },
+    {
+      "name": "xnor2",
+      "edge": 22
+    },
+    {
+      "name": "mux2",
+      "edge": 29
+    },
+    {
+      "name": "aoi21",
+      "edge": 32
+    },
+    {
+      "name": "oai21",
+      "edge": 35
+    },
+    {
+      "name": "and6_cut_boundary",
+      "edge": 43
+    },
+    {
+      "name": "and7_requires_multiple_cells",
+      "edge": 46
+    },
+    {
+      "name": "shared_reconvergence",
+      "edge": 51
+    },
+    {
+      "name": "repeated_fanin",
+      "edge": 53
+    },
+    {
+      "name": "contradiction_zero",
+      "edge": 56
+    },
+    {
+      "name": "constant_zero_operand",
+      "edge": 59
+    },
+    {
+      "name": "constant_one_operand",
+      "edge": 63
+    },
+    {
+      "name": "double_inversion",
+      "edge": 65
+    },
+    {
+      "name": "constant_zero_output",
+      "edge": 66
+    },
+    {
+      "name": "constant_one_output",
+      "edge": 67
+    }
+  ],
+  "nodes": [
+    {
+      "op": "INPUT",
+      "name": "a",
+      "input": [],
+      "output": [
+        0,
+        1,
+        3,
+        9,
+        17,
+        27,
+        54,
+        57,
+        61
+      ]
+    },
+    {
+      "op": "INPUT",
+      "name": "b",
+      "input": [],
+      "output": [
+        4,
+        8,
+        14,
+        16,
+        25
+      ]
+    },
+    {
+      "op": "INPUT",
+      "name": "c",
+      "input": [],
+      "output": [
+        30,
+        34,
+        36,
+        49
+      ]
+    },
+    {
+      "op": "INPUT",
+      "name": "d",
+      "input": [],
+      "output": [
+        37,
+        48
+      ]
+    },
+    {
+      "op": "INPUT",
+      "name": "e",
+      "input": [],
+      "output": [
+        39
+      ]
+    },
+    {
+      "op": "INPUT",
+      "name": "f",
+      "input": [],
+      "output": [
+        40
+      ]
+    },
+    {
+      "op": "INPUT",
+      "name": "s",
+      "input": [],
+      "output": [
+        23,
+        26,
+        45
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "direct_a",
+      "input": [
+        0
+      ],
+      "output": []
+    },
+    {
+      "op": "INV_X1",
+      "name": "not_a_shared",
+      "input": [
+        1
+      ],
+      "output": [
+        2,
+        15,
+        55,
+        64
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "inverted_a",
+      "input": [
+        2
+      ],
+      "output": []
+    },
+    {
+      "op": "AND2_X1",
+      "name": "ab_shared",
+      "input": [
+        3,
+        4
+      ],
+      "output": [
+        5,
+        6,
+        31,
+        38,
+        47,
+        52
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "and2",
+      "input": [
+        5
+      ],
+      "output": []
+    },
+    {
+      "op": "INV_X1",
+      "name": "nand_ab_shared",
+      "input": [
+        6
+      ],
+      "output": [
+        7
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "nand2",
+      "input": [
+        7
+      ],
+      "output": []
+    },
+    {
+      "op": "NOR2_X1",
+      "name": "or_ab_negated_terms",
+      "input": [
+        8,
+        9
+      ],
+      "output": [
+        10
+      ]
+    },
+    {
+      "op": "INV_X1",
+      "name": "or_ab",
+      "input": [
+        10
+      ],
+      "output": [
+        11,
+        12,
+        33
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "or2",
+      "input": [
+        11
+      ],
+      "output": []
+    },
+    {
+      "op": "INV_X1",
+      "name": "nor_ab",
+      "input": [
+        12
+      ],
+      "output": [
+        13
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "nor2",
+      "input": [
+        13
+      ],
+      "output": []
+    },
+    {
+      "op": "INV_X1",
+      "name": "not_b",
+      "input": [
+        14
+      ],
+      "output": [
+        18
+      ]
+    },
+    {
+      "op": "AOI22_X1",
+      "name": "xor_ab_negated_terms",
+      "input": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "output": [
+        19
+      ]
+    },
+    {
+      "op": "INV_X1",
+      "name": "xor_ab",
+      "input": [
+        19
+      ],
+      "output": [
+        20,
+        21
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "xor2",
+      "input": [
+        20
+      ],
+      "output": []
+    },
+    {
+      "op": "INV_X1",
+      "name": "xnor_ab",
+      "input": [
+        21
+      ],
+      "output": [
+        22
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "xnor2",
+      "input": [
+        22
+      ],
+      "output": []
+    },
+    {
+      "op": "INV_X1",
+      "name": "not_select",
+      "input": [
+        23
+      ],
+      "output": [
+        24
+      ]
+    },
+    {
+      "op": "AOI22_X1",
+      "name": "mux_negated_terms",
+      "input": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "output": [
+        28
+      ]
+    },
+    {
+      "op": "INV_X1",
+      "name": "mux",
+      "input": [
+        28
+      ],
+      "output": [
+        29
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "mux2",
+      "input": [
+        29
+      ],
+      "output": []
+    },
+    {
+      "op": "NOR2_X1",
+      "name": "aoi21",
+      "input": [
+        30,
+        31
+      ],
+      "output": [
+        32
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "aoi21",
+      "input": [
+        32
+      ],
+      "output": []
+    },
+    {
+      "op": "NAND2_X1",
+      "name": "oai21",
+      "input": [
+        33,
+        34
+      ],
+      "output": [
+        35
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "oai21",
+      "input": [
+        35
+      ],
+      "output": []
+    },
+    {
+      "op": "AND3_X1",
+      "name": "and4",
+      "input": [
+        36,
+        37,
+        38
+      ],
+      "output": [
+        41
+      ]
+    },
+    {
+      "op": "AND2_X1",
+      "name": "ef",
+      "input": [
+        39,
+        40
+      ],
+      "output": [
+        42
+      ]
+    },
+    {
+      "op": "AND2_X1",
+      "name": "and6",
+      "input": [
+        41,
+        42
+      ],
+      "output": [
+        43,
+        44
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "and6_cut_boundary",
+      "input": [
+        43
+      ],
+      "output": []
+    },
+    {
+      "op": "AND2_X1",
+      "name": "and7",
+      "input": [
+        44,
+        45
+      ],
+      "output": [
+        46
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "and7_requires_multiple_cells",
+      "input": [
+        46
+      ],
+      "output": []
+    },
+    {
+      "op": "OAI21_X1",
+      "name": "reconvergent_join_negated_terms",
+      "input": [
+        47,
+        48,
+        49
+      ],
+      "output": [
+        50
+      ]
+    },
+    {
+      "op": "INV_X1",
+      "name": "reconvergent_join",
+      "input": [
+        50
+      ],
+      "output": [
+        51
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "shared_reconvergence",
+      "input": [
+        51
+      ],
+      "output": []
+    },
+    {
+      "op": "BUF_X1",
+      "name": "same_signal_both_ports",
+      "input": [
+        52
+      ],
+      "output": [
+        53
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "repeated_fanin",
+      "input": [
+        53
+      ],
+      "output": []
+    },
+    {
+      "op": "AND2_X1",
+      "name": "a_and_not_a",
+      "input": [
+        54,
+        55
+      ],
+      "output": [
+        56
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "contradiction_zero",
+      "input": [
+        56
+      ],
+      "output": []
+    },
+    {
+      "op": "CONST_0",
+      "name": "const_zero",
+      "value": false,
+      "input": [],
+      "output": [
+        58,
+        60,
+        66
+      ]
+    },
+    {
+      "op": "AND2_X1",
+      "name": "a_and_zero",
+      "input": [
+        57,
+        58
+      ],
+      "output": [
+        59
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "constant_zero_operand",
+      "input": [
+        59
+      ],
+      "output": []
+    },
+    {
+      "op": "INV_X1",
+      "name": "const_one",
+      "input": [
+        60
+      ],
+      "output": [
+        62,
+        67
+      ]
+    },
+    {
+      "op": "AND2_X1",
+      "name": "a_and_one",
+      "input": [
+        61,
+        62
+      ],
+      "output": [
+        63
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "constant_one_operand",
+      "input": [
+        63
+      ],
+      "output": []
+    },
+    {
+      "op": "INV_X1",
+      "name": "double_inverted_a",
+      "input": [
+        64
+      ],
+      "output": [
+        65
+      ]
+    },
+    {
+      "op": "OUTPUT",
+      "name": "double_inversion",
+      "input": [
+        65
+      ],
+      "output": []
+    },
+    {
+      "op": "OUTPUT",
+      "name": "constant_zero_output",
+      "input": [
+        66
+      ],
+      "output": []
+    },
+    {
+      "op": "OUTPUT",
+      "name": "constant_one_output",
+      "input": [
+        67
+      ],
+      "output": []
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 7,
+      "port": 0
+    },
+    {
+      "source": 0,
+      "target": 8,
+      "port": 0
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "port": 0
+    },
+    {
+      "source": 0,
+      "target": 10,
+      "port": 0
+    },
+    {
+      "source": 1,
+      "target": 10,
+      "port": 1
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "port": 0
+    },
+    {
+      "source": 10,
+      "target": 12,
+      "port": 0
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "port": 0
+    },
+    {
+      "source": 1,
+      "target": 14,
+      "port": 0
+    },
+    {
+      "source": 0,
+      "target": 14,
+      "port": 1
+    },
+    {
+      "source": 14,
+      "target": 15,
+      "port": 0
+    },
+    {
+      "source": 15,
+      "target": 16,
+      "port": 0
+    },
+    {
+      "source": 15,
+      "target": 17,
+      "port": 0
+    },
+    {
+      "source": 17,
+      "target": 18,
+      "port": 0
+    },
+    {
+      "source": 1,
+      "target": 19,
+      "port": 0
+    },
+    {
+      "source": 8,
+      "target": 20,
+      "port": 0
+    },
+    {
+      "source": 1,
+      "target": 20,
+      "port": 1
+    },
+    {
+      "source": 0,
+      "target": 20,
+      "port": 2
+    },
+    {
+      "source": 19,
+      "target": 20,
+      "port": 3
+    },
+    {
+      "source": 20,
+      "target": 21,
+      "port": 0
+    },
+    {
+      "source": 21,
+      "target": 22,
+      "port": 0
+    },
+    {
+      "source": 21,
+      "target": 23,
+      "port": 0
+    },
+    {
+      "source": 23,
+      "target": 24,
+      "port": 0
+    },
+    {
+      "source": 6,
+      "target": 25,
+      "port": 0
+    },
+    {
+      "source": 25,
+      "target": 26,
+      "port": 0
+    },
+    {
+      "source": 1,
+      "target": 26,
+      "port": 1
+    },
+    {
+      "source": 6,
+      "target": 26,
+      "port": 2
+    },
+    {
+      "source": 0,
+      "target": 26,
+      "port": 3
+    },
+    {
+      "source": 26,
+      "target": 27,
+      "port": 0
+    },
+    {
+      "source": 27,
+      "target": 28,
+      "port": 0
+    },
+    {
+      "source": 2,
+      "target": 29,
+      "port": 0
+    },
+    {
+      "source": 10,
+      "target": 29,
+      "port": 1
+    },
+    {
+      "source": 29,
+      "target": 30,
+      "port": 0
+    },
+    {
+      "source": 15,
+      "target": 31,
+      "port": 0
+    },
+    {
+      "source": 2,
+      "target": 31,
+      "port": 1
+    },
+    {
+      "source": 31,
+      "target": 32,
+      "port": 0
+    },
+    {
+      "source": 2,
+      "target": 33,
+      "port": 0
+    },
+    {
+      "source": 3,
+      "target": 33,
+      "port": 1
+    },
+    {
+      "source": 10,
+      "target": 33,
+      "port": 2
+    },
+    {
+      "source": 4,
+      "target": 34,
+      "port": 0
+    },
+    {
+      "source": 5,
+      "target": 34,
+      "port": 1
+    },
+    {
+      "source": 33,
+      "target": 35,
+      "port": 0
+    },
+    {
+      "source": 34,
+      "target": 35,
+      "port": 1
+    },
+    {
+      "source": 35,
+      "target": 36,
+      "port": 0
+    },
+    {
+      "source": 35,
+      "target": 37,
+      "port": 0
+    },
+    {
+      "source": 6,
+      "target": 37,
+      "port": 1
+    },
+    {
+      "source": 37,
+      "target": 38,
+      "port": 0
+    },
+    {
+      "source": 10,
+      "target": 39,
+      "port": 0
+    },
+    {
+      "source": 3,
+      "target": 39,
+      "port": 1
+    },
+    {
+      "source": 2,
+      "target": 39,
+      "port": 2
+    },
+    {
+      "source": 39,
+      "target": 40,
+      "port": 0
+    },
+    {
+      "source": 40,
+      "target": 41,
+      "port": 0
+    },
+    {
+      "source": 10,
+      "target": 42,
+      "port": 0
+    },
+    {
+      "source": 42,
+      "target": 43,
+      "port": 0
+    },
+    {
+      "source": 0,
+      "target": 44,
+      "port": 0
+    },
+    {
+      "source": 8,
+      "target": 44,
+      "port": 1
+    },
+    {
+      "source": 44,
+      "target": 45,
+      "port": 0
+    },
+    {
+      "source": 0,
+      "target": 47,
+      "port": 0
+    },
+    {
+      "source": 46,
+      "target": 47,
+      "port": 1
+    },
+    {
+      "source": 47,
+      "target": 48,
+      "port": 0
+    },
+    {
+      "source": 46,
+      "target": 49,
+      "port": 0
+    },
+    {
+      "source": 0,
+      "target": 50,
+      "port": 0
+    },
+    {
+      "source": 49,
+      "target": 50,
+      "port": 1
+    },
+    {
+      "source": 50,
+      "target": 51,
+      "port": 0
+    },
+    {
+      "source": 8,
+      "target": 52,
+      "port": 0
+    },
+    {
+      "source": 52,
+      "target": 53,
+      "port": 0
+    },
+    {
+      "source": 46,
+      "target": 54,
+      "port": 0
+    },
+    {
+      "source": 49,
+      "target": 55,
+      "port": 0
+    }
+  ],
+  "topological_order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+  ],
+  "stats": {
+    "inputs": 7,
+    "outputs": 21,
+    "cells": 27,
+    "cell_counts": {
+      "INV_X1": 12,
+      "AND2_X1": 7,
+      "NOR2_X1": 2,
+      "AOI22_X1": 2,
+      "NAND2_X1": 1,
+      "AND3_X1": 1,
+      "OAI21_X1": 1,
+      "BUF_X1": 1
+    },
+    "nodes": 56,
+    "edges": 68
+  }
+}

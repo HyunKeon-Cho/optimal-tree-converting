@@ -1,0 +1,5 @@
+Metric                   Original    Optimized     Change
+Area (um^2)           1697.080000  1048.838000    -38.20%
+Leakage power (nW)   42073.548030 25913.006669    -38.41%
+Delay (ns)              18.208995    13.437548    -26.20%
+

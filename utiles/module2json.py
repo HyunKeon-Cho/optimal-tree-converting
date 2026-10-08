@@ -5,7 +5,7 @@ import json
 from collections import deque
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def read_aiger(path):
@@ -210,24 +210,32 @@ def convert(path):
     nodes = {n: nodes[n] for n in order if n in reachable}
     order = list(nodes)
 
-    graph_nodes = {0: {"op": "CONST", "value": False}}
+    graph_nodes = {0: {"op": "CONST_0", "name": "const_zero", "value": False}}
     graph_nodes.update({v // 2: {"op": "INPUT", "name": name} for name, v in zip(input_names, inputs)})
-    graph_nodes.update({n: {"op": "AND"} for n in nodes})
+    graph_nodes.update({n: {"op": "AND", "name": f"and_{n}"} for n in nodes})
     next_id = max(graph_nodes) + 1
     edges, inverters = [], {}
+    constant_one = None
     graph_order = [0] + [v // 2 for v in inputs]
 
     def signal(literal):
-        nonlocal next_id
+        nonlocal next_id, constant_one
         node = literal // 2
         if not literal & 1:
             return node
+        if literal == 1:
+            if constant_one is None:
+                constant_one = next_id
+                next_id += 1
+                graph_nodes[constant_one] = {"op": "CONST_1", "name": "const_one", "value": True}
+                graph_order.append(constant_one)
+            return constant_one
         # One explicit inverter per source signal; all consumers share it.
         if node not in inverters:
             inverter = next_id
             next_id += 1
             inverters[node] = inverter
-            graph_nodes[inverter] = {"op": "INV"}
+            graph_nodes[inverter] = {"op": "INV", "name": f"inv_{node}"}
             edges.append({"source": node, "target": inverter, "port": 0})
             graph_order.append(inverter)
         return inverters[node]
@@ -244,7 +252,7 @@ def convert(path):
         graph_nodes[output_id] = {"op": "OUTPUT", "name": name}
         edges.append({"source": source, "target": output_id, "port": 0})
         graph_order.append(output_id)
-        graph_outputs.append({"name": name, "node": output_id})
+        graph_outputs.append({"name": name, "edge": len(edges) - 1})
 
     node_indices = {node_id: index for index, node_id in enumerate(graph_nodes)}
     graph_nodes = list(graph_nodes.values())
@@ -259,16 +267,17 @@ def convert(path):
         graph_nodes[edge['target']]['input'].append(edge_id)
 
     graph = {
-        "schema_version": 4,
+        "schema_version": 5,
         "source": Path(path).name,
         "inputs": [{"name": name, "node": node_indices[v // 2]} for name, v in zip(input_names, inputs)],
-        "outputs": [{"name": pin['name'], "node": node_indices[pin['node']]} for pin in graph_outputs],
+        "outputs": graph_outputs,
         "nodes": graph_nodes,
         "edges": edges,
         "topological_order": [node_indices[node] for node in graph_order],
         "stats": {
             "inputs": len(inputs), "outputs": len(outputs), "and_nodes": len(nodes),
-            "inv_nodes": len(inverters), "nodes": len(graph_nodes), "edges": len(edges),
+            "inv_nodes": sum(n['op'] == 'INV' for n in graph_nodes),
+            "nodes": len(graph_nodes), "edges": len(edges),
         },
     }
     return graph

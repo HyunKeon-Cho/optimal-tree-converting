@@ -227,6 +227,21 @@ def artwork(info, width, height):
         parts.append(f'<circle cx="{w-bubble_radius}" cy="{h/2}" r="{bubble_radius}" fill="white"/>')
     return ''.join(parts)
 
+def output_nodes(graph):
+    """Resolve output ports declared by terminal edge or legacy node index."""
+    result = []
+    for pin in graph.get('outputs', []):
+        if 'edge' in pin:
+            edge_id = pin['edge']
+            if (not isinstance(edge_id, int) or isinstance(edge_id, bool)
+                    or not 0 <= edge_id < len(graph['edges'])):
+                raise ValueError('Invalid output edge index')
+            result.append(graph['edges'][edge_id]['target'])
+        else:
+            result.append(pin['node'])
+    return result
+
+
 def layout(graph, basic=False, fast=False, lib=None):
     lib = library() if lib is None else lib
     nodes, edges = graph['nodes'], graph['edges']
@@ -272,7 +287,7 @@ def layout(graph, basic=False, fast=False, lib=None):
         infos.append(info)
         sizes.append(geometry(info, count))
     output_ids = [i for i,n in enumerate(nodes) if n['op']=='OUTPUT']
-    declared = [pin['node'] for pin in graph.get('outputs', [])]
+    declared = output_nodes(graph)
     if len(declared)!=len(set(declared)) or any(i not in output_ids for i in declared):
         raise ValueError('Invalid outputs list')
     output_order = declared + [i for i in output_ids if i not in declared]
@@ -442,7 +457,7 @@ def to_dot(graph, fast=False, basic=False, fixed=False):
         lines.append(f'n{edge["source"]} -> n{edge["target"]} [tooltip="input {edge["port"]}"];')
     for op,rank,key in [('INPUT','source','inputs'),('OUTPUT','sink','outputs')]:
         ids=[i for i,n in enumerate(graph['nodes']) if n['op']==op]
-        declared=[p['node'] for p in graph.get(key,[])]
+        declared=output_nodes(graph) if key=='outputs' else [p['node'] for p in graph.get(key,[])]
         ids=declared+[i for i in ids if i not in declared]
         if ids:
             lines.append('{ rank='+rank+'; '+'; '.join(f'n{i}' for i in ids)+'; }')

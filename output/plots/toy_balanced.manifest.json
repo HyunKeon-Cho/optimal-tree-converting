@@ -1,0 +1,9 @@
+{
+  "source": "output/experiments/toy_balanced.json",
+  "nodes": 57,
+  "edges": 69,
+  "width": 1486.4,
+  "height": 2750,
+  "elapsed_seconds": 0.01599999999962165,
+  "svg_bytes": 119840
+}
